@@ -17,5 +17,5 @@ func main() {
 	y := NewYoutube(true)
 	arg := flag.Arg(0)
 	y.DecodeURL(arg)
-	y.StartDownload(currentDir)
+	y.GetDownloadUrl()
 }
