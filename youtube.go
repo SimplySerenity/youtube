@@ -70,8 +70,6 @@ func (y *Youtube) GetDownloadUrl() {
 	targetStream := y.StreamList[0]
 	url := targetStream["url"] + "&signature=" + targetStream["sig"]
 	y.log(fmt.Sprintln("Download url=", url))
-
-	y.log(fmt.Sprintln("Download to file=", destFile))
 }
 
 func (y *Youtube) parseVideoInfo() error {
