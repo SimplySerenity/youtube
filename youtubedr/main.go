@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	. "github.com/SegueII/youtube"
+	// 	. "github.com/SegueII/youtube"
 )
 
 func main() {
