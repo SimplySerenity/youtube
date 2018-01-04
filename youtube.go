@@ -65,6 +65,15 @@ func (y *Youtube) StartDownload(destFile string) error {
 	return err
 }
 
+func (y *Youtube) GetDownloadUrl() {
+	//download highest resolution on [0]
+	targetStream := y.StreamList[0]
+	url := targetStream["url"] + "&signature=" + targetStream["sig"]
+	y.log(fmt.Sprintln("Download url=", url))
+
+	y.log(fmt.Sprintln("Download to file=", destFile))
+}
+
 func (y *Youtube) parseVideoInfo() error {
 	answer, err := url.ParseQuery(y.videoInfo)
 	if err != nil {
